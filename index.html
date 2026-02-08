@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sahi Faisla - किसान वित्तीय जीवन सिमुलेशन</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Language Toggle -->
+<div class="language-toggle">
+  <button onclick="toggleLanguage()" class="lang-btn">🌐 EN/हिंदी</button>
+</div>
+
+<!-- Dashboard - Always Visible -->
+<div class="dashboard">
+  <div class="dashboard-item">
+    <span>💰</span>
+    <div class="dashboard-value">₹<span id="money">15000</span></div>
+  </div>
+  <div class="dashboard-item">
+    <span>📅</span>
+    <div class="dashboard-value"><span id="season">वर्ष 1</span></div>
+  </div>
+  <div class="dashboard-item">
+    <span>🟢</span>
+    <div class="meter-bar resilience-meter">
+      <div class="meter-fill" id="resilience-fill" style="width: 70%"></div>
+    </div>
+    <small id="resilience-text">70%</small>
+  </div>
+  <div class="dashboard-item">
+    <span>😊</span>
+    <div class="meter-bar happiness-meter">
+      <div class="meter-fill" id="happiness-fill" style="width: 80%"></div>
+    </div>
+    <small id="happiness-text">80%</small>
+  </div>
+</div>
+
+<!-- Main Game Screen -->
+<div class="game-container">
+  <div class="game-screen" id="screen">
+    <h2 id="title">आप किसान रमेश हैं</h2>
+    <p id="subtitle">आपका सफर शुरू होता है...</p>
+    <button onclick="showWelcome()" class="btn-primary" id="startBtn">शुरू करें</button>
+  </div>
+</div>
+
+<!-- Consequence Flash Modal -->
+<div class="modal" id="consequenceModal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h3 id="consequenceTitle">6 महीने बाद...</h3>
+    </div>
+    <div class="modal-body" id="consequenceBody">
+      <!-- Content filled by JS -->
+    </div>
+    <button onclick="closeModal()" class="btn-primary modal-btn" id="continueBtn">समझा</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
